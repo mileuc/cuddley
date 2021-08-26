@@ -1,0 +1,224 @@
+html {
+    min-height: 100vh;
+    position: relative;
+}
+
+body {
+}
+
+
+/* header.html */
+/* NAVBAR */
+
+.navbar-style {
+    padding: 1rem 6rem;
+    margin: 0;
+}
+
+
+/* footer.html */
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin: 0;
+}
+
+/* index.html */
+.home-container {
+  padding: 10% 10rem 10rem;
+  color: #c8b273;
+}
+
+.home-container .large-header {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+
+.home-container .small-header {
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+
+.home-row {
+    justify-content: center;
+}
+
+.p-tags {
+    margin-bottom: 3rem;
+
+}
+
+.p-tags p {
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.sign-up-option .sign-up-header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.sign-up-option .sign-up-button {
+    font-weight: 600;
+    color: #c8b273;
+    border: 2px solid #c8b273;
+}
+
+.sign-up-option .sign-up-button:hover {
+    color: #292b2c;
+    background-color: #c8b273;
+}
+
+/* register.html and login.html and add-list.html */
+.user-form {
+    margin: 5rem auto 0;
+    padding: 8% 10rem 10rem;
+    color: #c8b273;
+}
+
+.user-form .large-header {
+    font-size: 3rem;
+}
+
+.user-form .form-group {
+    margin: 1rem 0;
+}
+
+.user-form .btn {
+    font-weight: 600;
+    color: #c8b273;
+    border: 2px solid #c8b273;
+}
+
+.user-form .btn:hover {
+    color: #292b2c;
+    background-color: #c8b273;
+}
+
+/* dashboard.html */
+.dashboard-container {
+    padding: 10rem 10rem 10rem;
+}
+
+@media screen and (max-width:770px) {
+    .dashboard-container {padding-left: 1rem;}
+    .lists-row {padding-left: 6.5rem;}
+}
+
+.dashboard-container .large-header {
+    color: #c8b273;
+    min-width: 600px;
+    margin: 2rem 1% 0;
+}
+
+.dashboard-container .small-header {
+    color: #c8b273;
+    min-width: 600px;
+    margin: 0.5rem 1% 0;
+}
+
+.lists-container {
+}
+
+.welcome-row {
+    min-width: 380px;
+}
+
+.lists-row {
+    justify-content:center;
+}
+
+.lists-container .add-list-btn {
+    min-width: 190px;
+    margin: 1% 1.5%;
+}
+
+.list {
+    text-align: center;
+    min-height: 21rem;
+    min-width: 380px;
+    /* width: 25rem; */
+    margin: 2% 2%;
+    border: none;
+    padding: 2rem;
+    color: #292b2c;
+    overflow: auto;
+    padding-bottom: 2rem;
+}
+
+.list-header {
+    margin-bottom: 1rem;
+}
+
+.list-buttons {
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.list-btn {
+    color: #c8b273;
+}
+
+.list-btn:hover {
+    background-color: #c8b273;
+    color: black;
+}
+
+.task-section {
+    height: 285px;
+    overflow: auto;
+    padding-right: 0.5rem;
+    /* margin-top: 1rem; */
+}
+
+.task-section:last-child {
+    padding-bottom: 4.5rem;
+}
+
+.task-container {
+    margin: 1rem 0;
+    padding: 0 0 0.1rem 0;
+}
+
+.task-name {
+    text-align: left;
+    padding: 0 0.5rem;
+}
+
+.description-container {
+    width: 95%;
+    margin: auto;
+}
+
+.task-description {
+    padding: 0.2rem;
+    margin-bottom: 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.due-date {
+    text-align: left;
+    font-size: 1rem;
+    padding: 0 0 0 2%;
+}
+
+.task-buttons {
+    padding-right: 0.2rem;
+    text-align: right;
+}
+
+.edit-task-btn {
+    border-color: #c8b273;
+    color: #c8b273;
+}
+
+.edit-task-btn:hover {
+    background-color: #c8b273;
+    color: black;
+}

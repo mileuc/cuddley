@@ -1,0 +1,22 @@
+{% include "header.html" %}
+    <div class="home-container">
+      <div class="row home-row">
+        <div class="col-lg-6 col-md-12">
+          <h1 class="large-header">make work more comfy with cuddley!</h1>
+          <h3 class="small-header">getting too busy? make a list for any situation with our flexible task organizer!</h3>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="p-tags">
+          <p class="features"><i class="fas fa-arrow-right"></i> user-friendly task organizer! </p>
+          <p class="features"><i class="fas fa-arrow-right"></i> 100% free to use! </p>
+          <p class="features"><i class="fas fa-arrow-right"></i> looks great! </p>
+          </div>
+          <div class="sign-up-option">
+          <h3 class="sign-up-header">let us help you get started!</h3>
+          <a href="{{ url_for('sign_up') }}" class="btn btn-outline-dark btn-lg sign-up-button" type="button" name="button">sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% include "footer.html" %}

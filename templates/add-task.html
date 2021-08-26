@@ -1,0 +1,12 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+<div class="container">
+    <div class="user-form">
+    <h1 class="large-header">{{operation}} Task</h1>
+    {{ wtf.quick_form(form, novalidate=True, form_type="basic") }}
+    </div>
+</div>
+
+{% include "footer.html" %}

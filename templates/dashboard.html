@@ -1,0 +1,64 @@
+{% include 'header.html' %}
+
+<div class="dashboard-container">
+    <div class="lists-container">
+        <div class="row welcome-row">
+            <h1 class="large-header">Welcome, {{username}}!</h1>
+            <h3 class="small-header ">
+                {{ num_lists }} {% if num_lists != 1 %}Lists |{% else %}List | {% endif %}
+                {{ num_tasks }} {% if num_tasks != 1 %}Tasks |{% else %}Task | {% endif %}
+                {{ num_completed }} {% if num_completed != 1 %}Tasks Completed {% else %} Task Completed {% endif %}</h3>
+            <a href="{{ url_for('new_list') }}" type="button" class="btn btn-light btn-sm add-list-btn col-lg-1 col-md-6 col-sm-10" title="Add List">
+                Add New List  <i class="fas fa-plus"></i>
+            </a>
+        </div>
+        <div class="row lists-row">
+            {% for list in user_lists %}
+            <div class="list bg-light col-lg-3 col-md-5 col-sm-12">
+                <h3 class="list-header bg-light">{{list.list_name}}</h3>
+                <div class="list-buttons">
+                    <a href="{{ url_for('new_task', list_id=list.id) }}" type="button" class="btn btn-dark btn-sm list-btn"  title="Add Task"><i class="fas fa-plus"></i></a>
+                    <a href="{{ url_for('update_list', list_id=list.id) }}" type="button" class="btn btn-dark btn-sm list-btn" title="Edit List Name"><i class="fas fa-edit"></i></a>
+                    <a href="{{ url_for('delete_list', list_id=list.id) }}" type="button" class="btn btn-dark btn-outline-danger btn-sm" title="Delete List"><i class="fas fa-trash-alt"></i></a>
+                </div>
+                <div class="task-section">
+                    {% for task in user_tasks %}
+                    {% if task.parent_list_id == list.id %}
+                    <div class="task-container bg-dark text-light">
+                        {% if task.progress == 0 %}
+                        <h3 class="task-name">{{ task.task_name }}</h3>
+                        {% else %}
+                        <h3 class="task-name" style="text-decoration: line-through">{{ task.task_name }}</h3>
+                        {% endif %}
+                        <div class="description-container bg-light text-dark">
+                            <p class="task-description">{{ task.task_description }}</p>
+                        </div>
+                        <p class="due-date">Deadline: {{ task.deadline }}</p>
+                        <div class="task-buttons">
+                            <a href="{{ url_for('update_task', task_id=task.id) }}" type="button" class="btn btn-sm edit-task-btn" title="Edit Task">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a href="{{ url_for('delete_task', task_id=task.id) }}" type="button" class="btn btn-outline-danger btn-sm delete-task-btn" title="Delete Task">
+                                <i class="fas fa-trash-alt"></i>
+                            </a>
+                            {% if task.progress == 1 %}
+                            <a href="{{ url_for('update_task_progress', task_id=task.id) }}" type="button" class="btn btn-outline-secondary btn-sm check-box" title="Mark Task Incomplete">
+                                <i class="far fa-circle"></i>
+                            </a>
+                            {% else %}
+                            <a href="{{ url_for('update_task_progress', task_id=task.id) }}" type="button" class="btn btn-outline-success btn-sm check-box" title="Mark Task Complete">
+                                <i class="fas fa-check"></i>
+                            </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}

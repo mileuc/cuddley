@@ -1,0 +1,19 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+<div class="container">
+    <div class="user-form">
+    <h1 class="large-header">{{operation}} List</h1>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+            <p style="color:red;">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {{ wtf.quick_form(form, novalidate=True, form_type="basic") }}
+    </div>
+</div>
+
+{% include "footer.html" %}
