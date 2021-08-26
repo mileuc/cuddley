@@ -110,6 +110,7 @@ body {
 }
 
 @media screen and (max-width:770px) {
+    .home-container {padding-left: 4rem;}
     .dashboard-container {padding-left: 1rem;}
     .lists-row {padding-left: 6.5rem;}
 }
