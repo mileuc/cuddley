@@ -15,6 +15,10 @@ body {
     margin: 0;
 }
 
+.navigation-title {
+    font-weight:bold;
+}
+
 
 /* footer.html */
 .footer-container {
