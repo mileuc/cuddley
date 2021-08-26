@@ -78,7 +78,7 @@ body {
     background-color: #c8b273;
 }
 
-/* register.html and login.html and add-list.html */
+/* register.html and login.html and add-list.html and add-task.html */
 .user-form {
     margin: 5rem auto 0;
     padding: 8% 10rem 10rem;
@@ -109,21 +109,13 @@ body {
     padding: 10rem 10rem 10rem;
 }
 
-@media screen and (max-width:770px) {
-    .home-container {padding-left: 4rem;}
-    .dashboard-container {padding-left: 1rem;}
-    .lists-row {padding-left: 6.5rem;}
-}
-
 .dashboard-container .large-header {
     color: #c8b273;
-    min-width: 600px;
     margin: 2rem 1% 0;
 }
 
 .dashboard-container .small-header {
     color: #c8b273;
-    min-width: 600px;
     margin: 0.5rem 1% 0;
 }
 
@@ -226,4 +218,15 @@ body {
 .edit-task-btn:hover {
     background-color: #c8b273;
     color: black;
+}
+
+/* Media Query Breakpoint */
+@media screen and (max-width:770px) {
+    .home-container {padding-left: 4rem; padding-right: 1.5rem; padding-top: 3rem;}
+    .user-form {padding-left: 2rem; padding-right: 1rem;}
+    .dashboard-container {padding-left: 1rem;}
+    .dashboard-container .large-header {max-width: 500px;}
+    .dashboard-container .small-header {max-width: 500px;}
+    .lists-container .add-list-btn {max-width: 190px;}
+    .lists-row {padding-left: 6.5rem;}
 }
