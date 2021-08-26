@@ -13,8 +13,8 @@ load_dotenv("./.env")
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ.get("SECRET_KEY")
 # create/connect to database
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL").replace("://", "ql://", 1)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cuddley.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL").replace("://", "ql://", 1)
+# app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///cuddley.db"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
 
